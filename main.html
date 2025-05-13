@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-      /* شريط التنقل */
+      
 .main-nav {
   background-color: #222;
   padding: 12px 0;
@@ -18,7 +18,7 @@
   z-index: 1000;
 }
 
-/* تنسيق القائمة */
+
 .main-nav ul {
   list-style: none;
   margin: 0;
@@ -238,6 +238,7 @@
     h2 {
       color: rgb(224, 224, 228);
       font-size: 2.5em;
+      
     }
     h3{
       color: aliceblue;
@@ -290,6 +291,23 @@
   color: #333;
   letter-spacing: 2px;
 }
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
 
   </style>
 </head>
@@ -307,27 +325,32 @@
         <li><a href="portfolio.html"><i class="fas fa-folder-open"></i> أعمالنا</a></li>
         <li><a href="about.html"><i class="fas fa-user"></i> من نحن</a></li>
         <li><a href="contact.html"><i class="fas fa-phone"></i> تواصل معنا</a></li>
-        <script>
-          function toggleMenu() {
-            const menu = document.getElementById("sideNav");
-            menu.classList.toggle("open");
-          }
-        
-          document.querySelectorAll('.side-nav a').forEach(link => {
-            link.addEventListener('click', () => {
-              document.getElementById("sideNav").classList.remove("open");
-            });
-          });
-        </script>
+      
       </ul>
     </nav>
-  </body>
+  
   
   <header class="site-header">
     <div class="logo-container">
       <a href="index.html">
-        <img src="C:\Users\ُELBARAA PC\OneDrive\الصور\project studio originals\6f60fe20-4df3-4656-8d5f-9431184d9bbe.jpg" alt="" style="border-radius: 50%; width: 200px; height: 200px;">
+        <img src="https://i.imgur.com/cUrzJJq.jpeg" alt="logo" style="border-radius: 50%; width: 350px; height: auto;">
       </a>
+
+      <script>
+        function toggleMenu() {
+          const menu = document.getElementById("sideNav");
+          menu.classList.toggle("open");
+        }
+      
+        document.querySelectorAll('.side-nav a').forEach(link => {
+          link.addEventListener('click', () => {
+            document.getElementById("sideNav").classList.remove("open");
+          });
+        });
+      </script>
+      
+        
+      </body>
       <h1 class="company-name">S&F SMART ADVERTISING</h1>
     </div>
     <nav>
@@ -337,8 +360,8 @@
         <a href="portfolio.html"></a>
         <a href="services.html"></a>
       </nav>
-  </header>
-  <header>
+  
+
     <h1>وكالتك الذكية للتميز الرقمي</h1>
     <p>معك من الفكرة حتى الانتشار </p>
     <p>تسويقك يبدأ من هنا</p>
@@ -475,6 +498,7 @@
 </a>
     </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
