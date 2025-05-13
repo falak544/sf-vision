@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>S&F Smart Advertising</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+      /* شريط التنقل */
+.main-nav {
+  background-color: #222;
+  padding: 12px 0;
+  text-align: center;
+  font-family: 'Droid Arabic Kufi', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* تنسيق القائمة */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* كل عنصر داخل القائمة */
+.main-nav li {
+  margin: 0 20px;
+}
+
+/* الروابط */
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+}
+
+/* الأيقونات */
+.main-nav a i {
+  font-size: 18px;
+}
+
+/* عند المرور بالفأرة */
+.main-nav a:hover {
+  color: #00cfa1;
+}
+.side-nav {
+  position: relative;
+  width: 220px;
+  background-color: #222;
+  padding-top: 30px;
+  font-family: 'Droid Arabic Kufi', sans-serif;
+
+}
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  color: #fcf7f7;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* القائمة الجانبية قبل الفتح */
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: -250px; /* مخفية */
+  width: 220px;
+  height: 100%;
+  background-color: #1a1a1a;
+  padding-top: 30px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+/* عند الفتح */
+.side-nav.open {
+  left: 0;
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-nav li {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.side-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+}
+
+.side-nav a:hover {
+  background-color: #00cfa1;
+  border-radius: 8px;
+}
+    
+
+
+  
+  
+  
+    body {
+      font-family: 'Droib Arabic kufi'serif;
+      font-family: 'Tahoma', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #302f2f;
+      background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      color: #1e1c1c;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1e1e2f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    header h5 {
+      margin: 0;
+      font-size: 2em;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(189, 202, 45, 0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #0e0e0d;
+    }
+    .cta {
+      background-color: #ffe600;
+      padding: 30px;
+      text-align: center;
+      margin-top: 40px;
+      border-radius: 10px;
+    }
+    .cta a {
+      background-color: #1e1e2f;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+    
+    footer {
+      background-color: #1e1e2f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    .form-section {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(59, 22, 22, 0.1);
+    }
+    .form-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .form-section label {
+      font-weight: bold;
+    }
+    .form-section input,
+    .form-section textarea,
+    .form-section select {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    
+    .offer-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+    .offer-table th, .offer-table td {
+      border: 1px solid #ddd9d9;
+      padding: 10px;
+      text-align: center;
+      color: rgb(16, 16, 16); /* تعديل النص ليكون باللون الأبيض */
+      background-color: #f6f5f5;
+    }
+    .offer-table th {
+      background-color: #fef721e2;
+      font-size: 2em;
+    }
+    h2 {
+      color: rgb(224, 224, 228);
+      font-size: 2.5em;
+    }
+    h3{
+      color: aliceblue;
+      font-size: 2em;
+    }
+    h4 {
+      color: aliceblue;
+      font-size: 2.5em;
+    }
+    h5 {
+      color: #131313; 
+      font-size: 2.5em; /* زيادة حجم الخط */
+    }
+    .social-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-links a {
+  font-size: 24px;
+  color: #fff;
+  padding: 12px;
+  border-radius: 50%;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.social-links .facebook { background-color: #3b5998; }
+.social-links .instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+.social-links .tiktok { background-color: #000; }
+    logo-container {
+  text-align: center;
+}
+
+.company-name {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+  </style>
+</head>
+
+  <body>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    
+    <!-- القائمة الجانبية -->
+    <nav class="side-nav" id="sideNav">
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+        <li><a href="services.html"><i class="fas fa-briefcase"></i> خدماتنا</a></li>
+        <li><a href="portfolio.html"><i class="fas fa-folder-open"></i> أعمالنا</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> من نحن</a></li>
+        <li><a href="contact.html"><i class="fas fa-phone"></i> تواصل معنا</a></li>
+        <script>
+          function toggleMenu() {
+            const menu = document.getElementById("sideNav");
+            menu.classList.toggle("open");
+          }
+        
+          document.querySelectorAll('.side-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+              document.getElementById("sideNav").classList.remove("open");
+            });
+          });
+        </script>
+      </ul>
+    </nav>
+  </body>
+  
+  <header class="site-header">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="C:\Users\ُELBARAA PC\OneDrive\الصور\project studio originals\6f60fe20-4df3-4656-8d5f-9431184d9bbe.jpg" alt="" style="border-radius: 50%; width: 200px; height: 200px;">
+      </a>
+      <h1 class="company-name">S&F SMART ADVERTISING</h1>
+    </div>
+    <nav>
+        <a href="index.html"></a>
+        <a href="about.html"></a>
+        <a href="connect.html"> </a>
+        <a href="portfolio.html"></a>
+        <a href="services.html"></a>
+      </nav>
+  </header>
+  <header>
+    <h1>وكالتك الذكية للتميز الرقمي</h1>
+    <p>معك من الفكرة حتى الانتشار </p>
+    <p>تسويقك يبدأ من هنا</p>
+    
+  </header>
+ </nav>
+  <section>
+    <h2>خدماتنا</h2>
+    <div class="services">
+      <div class="card">
+        <h3>إدارة السوشيال ميديا</h3>
+        <p>ننشئ وننشر محتوى احترافي يزيد من التفاعل ويبني علاقة قوية مع جمهورك.</p>
+      </div>
+      <div class="card">
+        <h3>تصميم الحملات الإعلانية</h3>
+        <p>نصمم حملات ممولة مستهدفة لزيادة المبيعات والوصول لجمهورك المثالي.</p>
+      </div>
+      <div class="card">
+        <h3>تصميم الهوية البصرية</h3>
+        <p>نبتكر لك هوية تعكس علامتك التجارية بأسلوب احترافي وفريد.</p>
+      </div>
+      <div class="card">
+        <h3>بناء المواقع والمتاجر</h3>
+        <p>نصمم لك موقعًا أو متجرًا عصريًا وسهل الاستخدام لعرض خدماتك أو منتجاتك.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section>
+    <h2>عروضنا وباقاتنا</h2>
+    <table class="offer-table">
+      <tr>
+        <th>عدد البوستات</th>
+        <th>عدد الريلز</th>
+        <th>السعر</th>
+      </tr>
+      <tr>
+        <td>8 بوست</td>
+        <td>3 ريلز</td>
+        <td>125 دولار</td>
+      </tr>
+      <tr>
+        <td>12 بوست</td>
+        <td>5 ريلز</td>
+        <td>175 دولار</td>
+      </tr>
+      <tr>
+        <td>15 بوست</td>
+        <td>8 ريلز</td>
+        <td>225 دولار</td>
+      </tr>
+    </table>
+
+    <h3>باقات خدمات إضافية:</h3>
+    <table class="offer-table">
+      <tr>
+        <th>الفكرة</th>
+        <th>السعر</th>
+      </tr>
+      <tr>
+        <td>15 فكرة منشور (كاروسيل + ريلز + بوستر إعلاني)</td>
+        <td>300 دولار</td>
+      </tr>
+      <tr>
+        <td>20 فكرة منشور (كاروسيل + ريلز + بوستر إعلاني)</td>
+        <td>400 دولار</td>
+      </tr>
+      <tr>
+        <td>30 فكرة منشور (كاروسيل + ريلز + بوستر إعلاني)</td>
+        <td>600 دولار</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h4> portfolio S&F Smart Advertising</h4>
+    <iframe src="file:///C:/Users/%D9%8FELBARAA%20PC/Downloads/S&F%20SMART%20ADVRTESING.pdf" frameborder="0"></iframe>
+  </section>
+
+  <div class="form-section">
+    <div>
+      <h5 class="cta-text">اطلب خدمتك الان</h5>
+    </div>
+    <p>اختر الخدمة التسويقية التي تحتاجها وسنقوم بالتواصل معك لتقديم العرض الأنسب.</p>
+    <form>
+      <label for="name">الاسم الكامل</label>
+      <input type="text" id="name" name="name" required>
+
+  
+      <label for="service">اختر الخدمة</label>
+      <select id="service" name="service">
+        <option value="social">إدارة سوشيال ميديا</option>
+        <option value="ads">إعلانات ممولة</option>
+        <option value="branding">تصميم هوية بصرية</option>
+        <option value="website">تصميم موقع/متجر</option>
+        <option value="consult">استشارة تسويقية</option>
+      </select>
+  
+      <label for="details">تفاصيل إضافية</label>
+      <textarea id="details" name="details" rows="4" placeholder="اكتب أي تفاصيل مهمة هنا..."></textarea>
+      <div class="cta">
+        <a href="https://wa.me/+905340389162" target="_blank"> ارسل الطلب</a>
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 S&F Smart Advertising - جميع الحقوق محفوظة</p>
+  
+    <div class="social-links">
+      <a href="https://www.instagram.com/sf.smart.advertising" class="instagram" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/sf.smart.advertising" class="facebook" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.tiktok.com/@sf.smart.advertising?_t=ZS-8wBRYCqarN2&_r=1" class="tiktok" target="_blank">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://wa.me/905340389162" target="_blank" style="
+  position: fixed;
+  bottom: 20px;
+  right:  20px;
+  background-color: #25D366; /* اللون الأخضر */
+  color: white;
+  padding: 15px;
+  border-radius: 50%; /* يجعلها دائرة */
+  font-size: 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 9999;
+  text-align: center;
+">
+  <i class="fab fa-whatsapp"></i> <!-- أيقونة واتساب -->
+</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

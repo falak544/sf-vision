@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تواصل معنا - S&F Smart Advertising</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      direction: rtl;
+      color: #333;
+    }
+
+    .contact-section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      color: #1e1e1e;
+    }
+
+    .contact-section p {
+      font-size: 18px;
+      margin-bottom: 40px;
+      color: #555;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 20px;
+      text-align: right;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    .contact-form button {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #0056b3;
+    }
+
+    .contact-info {
+      margin-top: 60px;
+      text-align: right;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .contact-info h3 {
+      color: #007BFF;
+      margin-bottom: 10px;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"></a>
+            <a href="about.html"></a>
+            <a href="connect.html"> </a>
+            <a href="portfolio.html"></a>
+            <a href="services.html"></a>
+          </nav>
+    </header>
+
+  <section class="contact-section" id="contact">
+    <h2>تواصل معنا</h2>
+    <p>نحن هنا للإجابة على أسئلتك وتقديم الدعم لك في أي وقت. لا تتردد في التواصل معنا عبر النموذج التالي:</p>
+
+    <form class="contact-form">
+      <input type="text" placeholder="الاسم الكامل" required>
+      <input type="email" placeholder="البريد الإلكتروني" required>
+      <input type="text" placeholder="الموضوع" required>
+      <textarea placeholder="اكتب رسالتك هنا..." required></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+
+    <div class="contact-info">
+      <h3>معلومات التواصل</h3>
+      <p><strong>📧 البريد الإلكتروني:</strong> contact@sf-advertising.com</p>
+      <p><strong>📞 الهاتف:</strong> +90 534 038 91 62</p>
+      <p><strong>📍 الموقع:</strong> إسطنبول، تركيا</p>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
