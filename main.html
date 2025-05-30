@@ -742,6 +742,32 @@ background-color: rgba(255, 245, 214, 0.9);
   top: 0;
   left: 0;
 }
+    @media (max-width: 768px) {
+  .services-section {
+    width: 95%;
+    padding: 30px 10px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr; /* عمود واحد فقط على الموبايل */
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .service-box {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .section-title h2 {
+    font-size: 24px;
+  }
+
+  .video-background video {
+    object-fit: cover;
+    height: 100vh;
+  }
+}
   </style>
 </head>
 
