@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لماذا تختار S&F Smart Advertising؟</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      overflow-x: hidden;
+    }
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .section {
+      display: none;
+      animation: fadeIn 1s ease-in-out;
+      padding: 40px 20px;
+      border-radius: 24px;
+      background: #f9fafb;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+    }
+    .section.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    button {
+      background-color: #bfa76f;
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 12px;
+      margin: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+    button:hover {
+      background-color: #a88f4c;
+      transform: scale(1.05);
+    }
+    .feature-box {
+      margin: 15px auto;
+      padding: 18px 20px;
+      background: #fdf6e3;
+      border-radius: 12px;
+      width: fit-content;
+      font-weight: bold;
+      font-size: 16px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      color: #1e293b;
+    }
+    .nav-buttons {
+      margin-top: 30px;
+    }
+    h1 {
+      font-size: 32px;
+      color: #bfa76f;
+    }
+    h2, h3 {
+      color: #4b4b4b;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section active" id="section1">
+      <h1>لماذا تختار S&F Smart Advertising؟</h1>
+      <h2>بحلول تسويقية مبتكرة</h2>
+      <h3>نرتقي بعلامتك التجارية للقمة</h3>
+      <p>
+        مع فريقنا، ستحقق ظهورًا رقميًا قويًا يميزك عن المنافسين من خلال استراتيجيات مبتكرة، 
+        وحلول تسويقية فعالة، وتنفيذ احترافي يعزز نجاحك.
+      </p>
+    </div>
+
+    <div class="section" id="section2">
+      <h1>لماذا نحن متميزون؟</h1>
+      <p>
+        عملنا الجاد في مجال التطوير التقني والتسويق الإلكتروني<br>
+        والتواصل مع آلاف العملاء يجعل من شركتنا خياركم الأفضل<br>
+        لتحقيق أهدافكم. نبدع في اختيار أفضل الخدمات والأساليب التسويقية بهدف تطوير علامتك التجارية واستقطاب الزبائن.
+      </p>
+      <div class="feature-box">📈 خبرة 7 سنوات في التسويق الرقمي</div>
+      <div class="feature-box">💡 خبراء في التطوير التقني والإبداعي</div>
+      <div class="feature-box">🌐 حلول تسويق شاملة وعصرية</div>
+    </div>
+
+    <div class="section" id="section3">
+      <h1>هل أنتم مستعدون للتميز؟</h1>
+      <p>
+        لا تنتظروا الفرصة، اصنعوها معنا!<br>
+        تواصلوا معنا اليوم لنبدأ معًا قصة نجاح جديدة تليق بطموحاتكم.
+      </p>
+      <div class="feature-box">📬 info@sf-smart-advertising.com</div>
+      <div class="feature-box">📱 انستغرام وفيسبوك: sf.smart.advertising</div>
+      <div class="feature-box">🌐 موقعنا: sf-smart-advertising.com</div>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="prevSection()">السابق</button>
+      <button onclick="nextSection()">التالي</button>
+    </div>
+  </div>
+
+  <script>
+    let currentSection = 0;
+    const sections = document.querySelectorAll('.section');
+
+    function showSection(index) {
+      sections.forEach((sec, i) => {
+        sec.classList.remove('active');
+        if (i === index) sec.classList.add('active');
+      });
+    }
+
+    function nextSection() {
+      currentSection = (currentSection + 1) % sections.length;
+      showSection(currentSection);
+    }
+
+    function prevSection() {
+      currentSection = (currentSection - 1 + sections.length) % sections.length;
+      showSection(currentSection);
+    }
+  </script>
+</body>
+</html>

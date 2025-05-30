@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S&F Smart Advertising</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      direction: rtl;
+      background: #f9fafb;
+    }
+    .highlight {
+      color: #f97316;
+      font-weight: bold;
+    }
+    .card {
+      @apply p-6 bg-white rounded-2xl shadow-lg transition hover:shadow-2xl;
+    }
+    .animated {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+ <nav class="side-nav" id="sideNav">
+      <ul>
+        <li><a href="packages.html"><i class="fas fa-folder-open"></i> تصفح الباقات</a></li>
+        
+      
+      </ul>
+    </nav>
+<body class="bg-gradient-to-b from-orange-50 to-white">
+  <header class="text-center p-10 bg-orange-100 shadow-md">
+    <h1 class="text-4xl font-bold text-orange-600">S&F Smart Advertising</h1>
+    <p class="text-lg mt-4">ابدأ رحلتك الآن مع <span class="highlight">باقات الانطلاق</span> المصممة خصيصًا لنجاح مشروعك!</p>
+    
+    <button onclick="window.location.href='packages.html'" style="padding: 10px 20px; background-color: #fd6f03; color: white; border: none; border-radius: 5px; cursor: pointer;">
+  تصفح الباقات
+</button>
+  </header>
+
+  <section class="text-center py-12 px-4 max-w-5xl mx-auto">
+    <h2 class="text-2xl font-bold text-orange-600 mb-4">ما الذي نقدمه في باقات الانطلاق؟</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2721/2721262.png" class="w-20 mx-auto mb-4" alt="موقع إلكتروني">
+        <h3 class="font-bold text-lg">موقع إلكتروني احترافي</h3>
+        <p>واجهتك الرقمية المصممة خصيصًا لتعكس هويتك وتبرز خدماتك.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3659/3659692.png" class="w-20 mx-auto mb-4" alt="استراتيجية تسويق">
+        <h3 class="font-bold text-lg">استراتيجية تسويق متكاملة</h3>
+        <p>استهدف جمهورك بذكاء من خلال خطة تسويق تغطي كل القنوات.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3771/3771485.png" class="w-20 mx-auto mb-4" alt="تصاميم جذابة">
+        <h3 class="font-bold text-lg">تصاميم جاذبة</h3>
+        <p>احصل على تصاميم مبتكرة تُبرز علامتك التجارية.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4282/4282628.png" class="w-20 mx-auto mb-4" alt="حملات إعلانية">
+        <h3 class="font-bold text-lg">إدارة الحملات الإعلانية</h3>
+        <p>نقوم بالتخطيط والتنفيذ الكامل للحملات لضمان أعلى نتائج.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-center py-12 bg-orange-50 px-4">
+    <h2 class="text-2xl font-bold text-orange-600 mb-4">لماذا تختارنا؟</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card">
+        <h3 class="font-bold text-lg">الأداء الأمثل والأسرع</h3>
+        <p>موقع إلكتروني سريع وآمن وذو أداء عالٍ يجعل تجربة المستخدم سلسة.</p>
+      </div>
+      <div class="card">
+        <h3 class="font-bold text-lg">لوحة التحليلات</h3>
+        <p>أداة لقياس الأداء وعدد الزوار ومتابعة التفاعل لحظة بلحظة.</p>
+      </div>
+      <div class="card">
+        <h3 class="font-bold text-lg">سرعة التنفيذ</h3>
+        <p>ننجز مشاريعك في الوقت المحدد وبأعلى جودة ممكنة.</p>
+      </div>
+      <div class="card">
+        <h3 class="font-bold text-lg">ضمان الرضى التام</h3>
+        <p>نلتزم بالتعديلات حتى نصل إلى رضاك الكامل عن النتيجة.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-8 bg-orange-100 mt-12">
+    <p class="text-sm">© 2025 جميع الحقوق محفوظة لـ S&F Smart Advertising</p>
+  </footer>
+
+  <script>
+    // تحريك الصفحة عند التمرير
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+  <button onclick="window.location.href='main.html'" style="padding: 10px 20px; background-color: #004080; color: white; border: none; border-radius: 5px; cursor: pointer;">
+  الرجوع إلى الصفحة الرئيسية
+</button>
+</body>
+</html>
