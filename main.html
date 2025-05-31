@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-
+ <html lang="ar" dir="rtl"></html>
 <head>
-  
   
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,84 +8,28 @@
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <html lang="ar" dir="rtl">
+
 
   <meta charset="UTF-8">
   <title>سلايدر الصور</title>
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-
+</head>
+<body>
   <style>
     footer {
       background-color: rgba(25, 25, 45, 0.88);
 
       padding-top: 0rem;
       padding-bottom: 0rem;
-      width: 1520px;
+      
     }
     footer p {
  
   color: white;
       font-size: 0.990rem; /* text-sm في Tailwind */
     }
-
-   /* تصميم للشاشات الكبيرة */
-body {
-  font-size: 18px;
-}
-
-/* تصميم للشاشات الصغيرة (الموبايل) */
-@media (max-width: 600px) {
-  body {
-    font-size: 16px;
-    padding: 10px;
-  }
-  /* عدل أي عناصر أخرى لتتناسب مع الموبايل */
-}
-
-/* === تأثيرات الظهور والانتقال === */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in-up {
-  animation: fadeInUp 1s ease forwards;
-  opacity: 0;
-}
-
-.fade-in-up.delay-1 {
-  animation-delay: 0.3s;
-}
-.fade-in-up.delay-2 {
-  animation-delay: 0.6s;
-}
-.fade-in-up.delay-3 {
-  animation-delay: 0.9s;
-}
-
-/* === التنسيق العام === */
-body {
-  font-family: 'Droid Arabic Kufi', Tahoma, sans-serif;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 0;
-  color: #2b2b2b;
-  background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  direction: rtl;
-  scroll-behavior: smooth;
-}
 
 /* === رأس الصفحة === */
 header {
