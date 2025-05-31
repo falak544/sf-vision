@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+
 <head>
+  
+  
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>S&F Smart Advertising</title>
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <html lang="ar" dir="rtl">
-<head>
+
   <meta charset="UTF-8">
   <title>سلايدر الصور</title>
 
@@ -15,7 +18,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
   <style>
-    /* تصميم للشاشات الكبيرة */
+    footer {
+      background-color: rgba(25, 25, 45, 0.88);
+
+      padding-top: 0rem;
+      padding-bottom: 0rem;
+      width: 1520px;
+    }
+    footer p {
+ 
+  color: white;
+      font-size: 0.990rem; /* text-sm في Tailwind */
+    }
+
+   /* تصميم للشاشات الكبيرة */
 body {
   font-size: 18px;
 }
@@ -28,32 +44,34 @@ body {
   }
   /* عدل أي عناصر أخرى لتتناسب مع الموبايل */
 }
-    /* === تأثيرات الظهور والانتقال === */
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
 
-    .fade-in-up {
-      animation: fadeInUp 1s ease forwards;
-      opacity: 0;
-    }
+/* === تأثيرات الظهور والانتقال === */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    .fade-in-up.delay-1 {
-      animation-delay: 0.3s;
-    }
-    .fade-in-up.delay-2 {
-      animation-delay: 0.6s;
-    }
-    .fade-in-up.delay-3 {
-      animation-delay: 0.9s;
-    }
+.fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.fade-in-up.delay-1 {
+  animation-delay: 0.3s;
+}
+.fade-in-up.delay-2 {
+  animation-delay: 0.6s;
+}
+.fade-in-up.delay-3 {
+  animation-delay: 0.9s;
+}
+
 /* === التنسيق العام === */
 body {
   font-family: 'Droid Arabic Kufi', Tahoma, sans-serif;
@@ -720,7 +738,7 @@ background-color: rgba(255, 245, 214, 0.9);
 
 /* إعدادات السلايدر */
 .swiper {
-  width: 90%;
+  width: 100%;
   max-width: 1000px;
   height: 250px;
   margin: auto;
@@ -733,8 +751,8 @@ background-color: rgba(255, 245, 214, 0.9);
 }
 
 .swiper-slide img {
-  width: 300px;
-  height: 200px;
+  width: 600px;
+  height: 400px;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   object-fit: cover;
@@ -755,7 +773,7 @@ background-color: rgba(255, 245, 214, 0.9);
   top: 0;
   left: 0;
 }
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
   .services-section {
     width: 95%;
     padding: 30px 10px;
@@ -812,12 +830,12 @@ background-color: rgba(255, 245, 214, 0.9);
       </a>
       <h1 class="company-name">S&F SMART ADVERTISING</h1>
     </div>
-    <h1 class="fade-in-up delay-2">وكالتك الذكية للتميز الرقمي</h1>
+    <h2 class="fade-in-up delay-2">وكالتك الذكية للتميز الرقمي</h2>
     <p class="fade-in-up delay-3">معك من الفكرة حتى الانتشار</p>
     <p class="fade-in-up delay-3">تسويقك يبدأ من هنا</p>
   </header>
 
-<body>
+
 
   <!-- سلايدر Swiper -->
   <div class="swiper">
@@ -854,7 +872,7 @@ background-color: rgba(255, 245, 214, 0.9);
       },
     });
     </script>
-</body>
+
 
    
     <div class="button-group">
@@ -939,7 +957,7 @@ background-color: rgba(255, 245, 214, 0.9);
 
   <footer>
     <div class="social-links" style="text-align:center; margin:40px 0;">
-      <a href="https://www.facebook.com/sf.smart.advertising" target="_blank" rel="noopener" class="facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.facebook.com/share/1HyuhikZRh/" target="_blank" rel="noopener" class="facebook"><i class="fab fa-facebook-f"></i></a>
       <a href="https://www.instagram.com/sf.smart.advertising" target="_blank" rel="noopener" class="instagram"><i class="fab fa-instagram"></i></a>
       <a href="https://www.tiktok.com/@sf.smart.advertising" target="_blank" rel="noopener" class="tiktok"><i class="fab fa-tiktok"></i></a>
     </div>
@@ -1026,6 +1044,13 @@ background-color: rgba(255, 245, 214, 0.9);
     },
     "retina_detect": true
   });
+ 
+
 </script>
+  <!-- هنا يجي الفوتر -->
+  <footer class="text-center py-8 bg-[#fff3d0] mt-12">
+    <p class="text-sm text-[#3a3a3a]">© 2025 جميع الحقوق محفوظة لـ S&F Smart Advertising</p>
+  </footer>
+
 </body>
 </html>
