@@ -9,8 +9,9 @@
       font-family: 'Cairo', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f8f8f8;
-      color: #333;
+      background: linear-gradient(to bottom right, #fff8e1, #fceabb);
+      color: #3e3e3e;
+      direction: rtl;
     }
 
     .services-section {
@@ -21,15 +22,15 @@
     }
 
     .services-section h2 {
-      font-size: 36px;
+      font-size: 38px;
       margin-bottom: 10px;
-      color: #1e1e1e;
+      color: #b8860b;
     }
 
     .services-section p {
-      font-size: 18px;
+      font-size: 20px;
       margin-bottom: 40px;
-      color: #555;
+      color: #6a5e39;
     }
 
     .services-grid {
@@ -39,46 +40,66 @@
     }
 
     .service-card {
-      background: white;
+      background: #fffef8;
+      border: 1px solid #e6d8b3;
       border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 15px rgba(184, 134, 11, 0.1);
       padding: 30px 20px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 25px rgba(184, 134, 11, 0.15);
     }
 
     .service-icon {
       font-size: 40px;
-      color: #007BFF;
+      color: #b8860b;
       margin-bottom: 15px;
     }
 
     .service-title {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: bold;
+      color: #a67c00;
       margin-bottom: 10px;
     }
 
     .service-desc {
       font-size: 16px;
-      color: #666;
+      color: #5a4b1e;
     }
+
+    button {
+      background-color: #b8860b;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      font-size: 16px;
+      margin: 40px auto;
+      display: block;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #a37405;
+    }
+
   </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html"></a>
-            <a href="about.html"></a>
-            <a href="connect.html"> </a>
-            <a href="portfolio.html"></a>
-            <a href="services.html"></a>
-          </nav>
-    </header>
+  <header>
+    <nav>
+      <a href="index.html"></a>
+      <a href="about.html"></a>
+      <a href="connect.html"> </a>
+      <a href="portfolio.html"></a>
+      <a href="services.html"></a>
+    </nav>
+  </header>
 
   <section class="services-section" id="services">
     <h2>خدماتنا</h2>
@@ -113,12 +134,12 @@
         <div class="service-icon">💻</div>
         <div class="service-title">تصميم المواقع</div>
         <div class="service-desc">نصمم مواقع عصرية وسريعة الاستجابة تعكس احترافية شركتك.</div>
-        
       </div>
-      
     </div>
   </section>
-<script src="script.js"></script>
 
+  <button onclick="history.back()">رجوع</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
