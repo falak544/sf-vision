@@ -9,7 +9,9 @@
       font-family: 'Cairo', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fdfdfd;
+      background-image: url('golden_decor_bg.png'); /* تأكدي من رفع الصورة في نفس مجلد الملف */
+      background-size: cover;
+      background-attachment: fixed;
       color: #333;
       direction: rtl;
     }
@@ -24,13 +26,13 @@
     .portfolio-section h2 {
       font-size: 36px;
       margin-bottom: 10px;
-      color: #1e1e1e;
+      color: #b8860b; /* ذهبي داكن */
     }
 
     .portfolio-section p {
       font-size: 18px;
       margin-bottom: 50px;
-      color: #555;
+      color: #6e5c3c; /* بني ذهبي */
     }
 
     .portfolio-grid {
@@ -40,15 +42,16 @@
     }
 
     .project-card {
-      background-color: #fff;
+      background-color: rgba(255, 255, 255, 0.95);
       border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease;
+      box-shadow: 0 4px 15px rgba(184, 134, 11, 0.2); /* ظل ذهبي خفيف */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .project-card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(184, 134, 11, 0.3);
     }
 
     .project-image {
@@ -64,61 +67,61 @@
 
     .project-title {
       font-size: 20px;
-      color: #007BFF;
+      color: #cfa73f; /* ذهبي فاتح */
       margin-bottom: 10px;
     }
 
     .project-desc {
       font-size: 16px;
-      color: #666;
+      color: #5e4a2d;
     }
-    button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 5px;
-}
 
-button:hover {
-  background-color: #45a049;
-}
+    button {
+      background-color: #cfa73f;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 30px auto;
+      display: block;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #b8860b;
+    }
   </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html"></a>
-            <a href="about.html"></a>
-            <a href="connect.html"> </a>
-            <a href="portfolio.html"></a>
-            <a href="services.html"></a>
-          </nav>
-    </header>
+  <header>
+    <nav>
+      <a href="index.html"></a>
+      <a href="about.html"></a>
+      <a href="connect.html"> </a>
+      <a href="portfolio.html"></a>
+      <a href="services.html"></a>
+    </nav>
+  </header>
 
   <section class="portfolio-section" id="portfolio">
     <h2>أعمالنا</h2>
     <p>نقدم لكم باقة من المشاريع التي نفخر بها، والتي تعكس جودة خدماتنا واحترافية فريقنا.</p>
 
     <div class="portfolio-grid">
-      <!-- مشروع 1: حملة تسويق لمتجر ملابس -->
+      <!-- المشروع 1 -->
       <div class="project-card">
         <img class="project-image" src="https://i.imgur.com/RC8liwF.jpeg" alt="حملة تسويق لمتجر ملابس">
         <div class="project-content">
           <div class="project-title">حملة تسويق إلكتروني لمتجر ملابس</div>
           <div class="project-desc">
-            نفذنا حملة تسويق رقمية مبتكرة لمتجر ملابس نسائية، شملت تصميم محتوى بصري جذاب وإعلانات ممولة على إنستغرام وفيسبوك. الحملة حققت زيادة بنسبة 85٪ في التفاعل، وارتفاعًا واضحًا في الطلبات خلال فترة قصيرة.
+            نفذنا حملة تسويق رقمية مبتكرة لمتجر ملابس نسائية، شملت تصميم محتوى بصري جذاب وإعلانات ممولة على إنستغرام وفيسبوك. الحملة حققت زيادة بنسبة 85٪ في التفاعل.
           </div>
         </div>
       </div>
 
-      <!-- مشروع 2: تصميم هوية بصرية لمقهى عصري -->
+      <!-- المشروع 2 -->
       <div class="project-card">
         <img class="project-image" src="https://images.unsplash.com/photo-1509395176047-4a66953fd231" alt="تصميم هوية بصرية لمقهى عصري">
         <div class="project-content">
@@ -127,7 +130,7 @@ button:hover {
         </div>
       </div>
 
-      <!-- مشروع 3: إدارة حسابات سوشيال ميديا لشركة عقارية -->
+      <!-- المشروع 3 -->
       <div class="project-card">
         <img class="project-image" src="https://images.unsplash.com/photo-1557804506-669a67965ba0" alt="إدارة حسابات سوشيال ميديا لشركة عقارية">
         <div class="project-content">
@@ -136,7 +139,7 @@ button:hover {
         </div>
       </div>
 
-      <!-- مشروع 4: تصميم موقع إلكتروني لوكالة سفر -->
+      <!-- المشروع 4 -->
       <div class="project-card">
         <img class="project-image" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="تصميم موقع إلكتروني لوكالة سفر">
         <div class="project-content">
@@ -146,6 +149,7 @@ button:hover {
       </div>
     </div>
   </section>
+
   <button onclick="history.back()">رجوع</button>
   <script src="script.js"></script>
 </body>
