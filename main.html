@@ -713,59 +713,70 @@ background-color: rgba(255, 245, 214, 0.9);
   z-index: -1;
   top: 0;
   left: 0;
-}@media (max-width: 768px) {
-  header h1.company-name {
-    font-size: 2em;
-    letter-spacing: 2px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.container {
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
   }
 
-  header h1:not(.company-name),
-  header p {
-    font-size: 1em;
+  .container, .section, .card, .content-box {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
   }
 
-  .side-nav {
-    width: 200px;
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
 
-  .menu-toggle {
-    width: 30px;
-    height: 25px;
-    top: 15px;
-    left: 15px;
+  h1, h2, h3, p {
+    text-align: center;
   }
 
-  .menu-toggle span {
-    height: 3px;
+  .buttons, .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .logo-container img {
-    width: 200px;
+  .button {
+    width: 100%;
   }
 
-  section.content-section {
-    padding: 20px 15px;
-    font-size: 1em;
-  }
-
-  .profile-button {
-    padding: 12px 25px;
-    font-size: 16px;
-  }
-
-  .social-links a {
-    font-size: 20px;
-    padding: 12px;
-  }
-
-  .whatsapp-float {
-    font-size: 24px;
-    padding: 12px;
-    bottom: 15px;
-    left: 15px;
+  /* اجعلي النصوص لا تتجاوز الشاشة */
+  * {
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 }
   </style>
+  
 </head>
 
 <body>
