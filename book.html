@@ -62,12 +62,29 @@
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
       color: #1e293b;
     }
+    .reasons-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .reason-box {
+      background-color: #fdf6e3;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+    .reason-box:hover {
+      transform: translateY(-5px);
+    }
     .nav-buttons {
       margin-top: 30px;
     }
     h1 {
       font-size: 32px;
       color: #bfa76f;
+      margin-bottom: 20px;
     }
     h2, h3 {
       color: #4b4b4b;
@@ -75,10 +92,12 @@
     p {
       font-size: 18px;
       line-height: 1.9;
+      color: #1e293b;
     }
   </style>
 </head>
 <body>
+  
   <div class="container">
     <div class="section active" id="section1">
       <h1>لماذا تختار S&F Smart Advertising؟</h1>
@@ -103,6 +122,36 @@
     </div>
 
     <div class="section" id="section3">
+      <h1>مزايا وكالة S&F Smart Advertising</h1>
+      <div class="reasons-container">
+        <div class="reason-box">
+          <h3>إبداع لا محدود</h3>
+          <p>نقدم أفكارًا مبتكرة وحلولًا تسويقية فريدة تلائم احتياجاتك وتُبرز علامتك التجارية وسط المنافسين.</p>
+        </div>
+        <div class="reason-box">
+          <h3>خبرة احترافية</h3>
+          <p>نمتلك فريقًا متمرسًا من المحترفين في التسويق الرقمي، يعمل بشغف لتحقيق نتائج حقيقية ومُقاسة.</p>
+        </div>
+        <div class="reason-box">
+          <h3>تصميمات مبهرة</h3>
+          <p>نتميز بلمسة تصميم احترافية تمزج بين الأناقة والوظيفية لخلق تجربة بصرية جذابة ومؤثرة.</p>
+        </div>
+        <div class="reason-box">
+          <h3>حلول مخصصة</h3>
+          <p>نُصمم خدماتنا خصيصًا لتتناسب مع طبيعة مشروعك، ونعمل جنبًا إلى جنب معك لتحقيق أهدافك.</p>
+        </div>
+        <div class="reason-box">
+          <h3>التزام بالمواعيد</h3>
+          <p>نلتزم بتسليم المشاريع في الوقت المحدد دون التأثير على جودة التنفيذ، لأن وقتك ثمين.</p>
+        </div>
+        <div class="reason-box">
+          <h3>دعم مستمر</h3>
+          <p>نقدم دعمًا فنيًا وتواصلاً دائمًا بعد تنفيذ المشاريع لضمان استمرارية النجاح وتحقيق النتائج المرجوة.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="section4">
       <h1>هل أنتم مستعدون للتميز؟</h1>
       <p>
         لا تنتظروا الفرصة، اصنعوها معنا!<br>
@@ -141,4 +190,5 @@
     }
   </script>
 </body>
+</html>
 </html>
