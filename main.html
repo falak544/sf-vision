@@ -1,5 +1,5 @@
 <!DOCTYPE html>
- <html lang="ar" dir="rtl"></html>
+ <html lang="ar" dir="rtl">
 <head>
   
   <meta charset="UTF-8" />
@@ -10,7 +10,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
-  <meta charset="UTF-8">
+  
   <title>سلايدر الصور</title>
 
   <!-- Swiper CSS -->
@@ -19,7 +19,7 @@
 
   <style>
     footer {
-      background-color: rgba(25, 25, 45, 0.88);
+      background-color: rgba(42, 42, 43, 0.88);
 
       padding-top: 0rem;
       padding-bottom: 0rem;
@@ -49,7 +49,7 @@
 
 /* === رأس الصفحة === */
 header {
-  background-color: rgba(25, 25, 45, 0.88);
+  background: linear-gradient(135deg, hsl(0, 0%, 9%));
   color: white;
   padding: 30px 20px;
   text-align: center;
@@ -317,7 +317,7 @@ header p {
       border-radius: 50%;
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
       z-index: 1002;
-      text-align: cent0er;
+      text-align: center;
       transition: background-color 0.3s ease;
       cursor: pointer;
     }
@@ -327,44 +327,15 @@ header p {
       transform: scale(1.1);
     }
 
-    /* استجابة القائمة ولون الخلفية */
-    @media (min-width: 768px) {
-      .side-nav {
-        width: 300px;
-      }
-
-      .profile-button {
-        font-size: 20px;
-        padding: 18px 45px;
-      }
-    }
-     @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .fade-in-up {
-      animation: fadeInUp 1s ease forwards;
-      opacity: 0;
-    }
-    .fade-in-up.delay-1 { animation-delay: 0.3s; }
-    .fade-in-up.delay-2 { animation-delay: 0.6s; }
-    .fade-in-up.delay-3 { animation-delay: 0.9s; }
-
    /* تنسيق عام للجسم */
 body {
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+  background-color: #fffaf5;
   margin: 0;
   padding: 0;
-  font-family: 'Cairo', 'Tajawal', sans-serif;
-  background-color: #1a1a1c;
-  background-image: linear-gradient(to right, #1a1a1c, #1c1c1f);
-  color: #e0c77e;
+  color: #3e2c14;
   text-align: center;
+
 }
 
 /* الحاوية */
@@ -448,36 +419,36 @@ p:hover {
 /* شبكة الخدمات */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 30px 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 20px 30px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
 }
-
 .service-box {
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color: rgba(255, 245, 214, 0.9);
   border: 1px solid #f5d078;
-  border-radius: 20px;
-  padding: 25px;
-  color: #f7e8bc;
+  border-radius: 16px;
+  padding: 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #7a5b2c;
+  box-shadow: 0 3px 12px rgba(247, 198, 60, 0.1);
   transition: all 0.3s ease;
-  box-shadow: 0 3px 15px rgba(251, 215, 90, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: right;
 }
 
 .service-box:hover {
-  background-color: rgba(255, 228, 163, 0.08);
+  background-color: rgba(255, 238, 184, 0.95);
+  color: #5a3f1d;
+  box-shadow: 0 6px 20px rgba(255, 209, 96, 0.2);
   transform: translateY(-4px);
-  box-shadow: 0 5px 18px rgba(255, 214, 70, 0.12);
 }
 
-.service-box i {
-  display: block;
-  font-size: 28px;
-  margin-bottom: 15px;
-  color: #f9d672;
-}
-/* فقرة رئيسية كبيرة - أزلتها لأن خط 88px ضخم جداً؛ يمكن إعادة تفعيله مع تعديل */
-
-/* البوكس الخاص بالتعريف intro-box */
 * صندوق المقدمة */
 .intro-box {
   background: linear-gradient(135deg, #fff2cc, #fff8e1);
@@ -749,31 +720,56 @@ background-color: rgba(255, 245, 214, 0.9);
   z-index: -1;
   top: 0;
   left: 0;
-}
-@media (max-width: 768px) {
-  .services-section {
-    width: 95%;
-    padding: 30px 10px;
+}@media (max-width: 768px) {
+  header h1.company-name {
+    font-size: 2em;
+    letter-spacing: 2px;
   }
 
-  .services-grid {
-    grid-template-columns: 1fr; /* عمود واحد فقط على الموبايل */
-    gap: 20px;
-    padding: 10px;
+  header h1:not(.company-name),
+  header p {
+    font-size: 1em;
   }
 
-  .service-box {
+  .side-nav {
+    width: 200px;
+  }
+
+  .menu-toggle {
+    width: 30px;
+    height: 25px;
+    top: 15px;
+    left: 15px;
+  }
+
+  .menu-toggle span {
+    height: 3px;
+  }
+
+  .logo-container img {
+    width: 200px;
+  }
+
+  section.content-section {
+    padding: 20px 15px;
+    font-size: 1em;
+  }
+
+  .profile-button {
+    padding: 12px 25px;
     font-size: 16px;
-    padding: 15px;
   }
 
-  .section-title h2 {
+  .social-links a {
+    font-size: 20px;
+    padding: 12px;
+  }
+
+  .whatsapp-float {
     font-size: 24px;
-  }
-
-  .video-background video {
-    object-fit: cover;
-    height: 100vh;
+    padding: 12px;
+    bottom: 15px;
+    left: 15px;
   }
 }
   </style>
